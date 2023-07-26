@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADAPTIVE CSS | Media Queries</title>
+    <style>
+        body {
+            background-color: #333;
+            color: white;
+        }
+        a {
+            color: white;
+        }
+        .container {
+            width: 86%;
+            margin: 20px auto;
+            border: 1px solid black;
+            padding: 10px;  
+            max-width: 1200px;      
+
+        }
+        .container ul {
+            width: 30%;
+            background-color: #444;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .container article {
+            width: 60%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        /* adaptivness */
+        @media (max-width: 580px) {
+            .container ul,
+            .container article {
+                display: block;
+                width: 100%;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <ul>
+            <li><a href="">Lorem, ipsum dolor.</a></li>
+            <li><a href="">Error, voluptates magnam?</a></li>
+            <li><a href="">Asperiores, perferendis cum.</a></li>
+        </ul>
+
+        <article>
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, quibusdam ab similique quidem officia id assumenda sed mollitia, animi, sint accusamus impedit delectus alias soluta quosm ipsum dolor sit amet, consectetur adipisicing elit. In, quibusdam ab similique quidem officia id assumenda sed mollitia, animi, sint accusamus impedit delectus alias soluta quos explicabo debitis consequuntu explicabo debitis consequuntur? Rem!</p>
+        </article>
+    </div>
+
+</body>
+</html>
