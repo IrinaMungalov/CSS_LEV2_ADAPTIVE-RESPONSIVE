@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adaptive H-V Carousel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="carousel"> 
+        <div class="track">
+            <div id="s-1"> 
+                <!-- NEW -->
+                <picture>
+                    <source srcset="images/1.jpg" media="(min-width: 1300px)">
+                    <img src="images/1_s.jpg" alt="Slide 1"> 
+                </picture>
+
+                <div class="controls">
+                    <a href="#s-5">
+                        prev
+                    </a>
+                    <a href="#s-2">
+                        next
+                    </a>
+                </div>
+            </div><div  id="s-2">
+
+                <picture>
+                    <source srcset="images/2.jpg" media="(min-width: 1300px)">
+                <img src="images/2_s.jpg" alt="Slide 2">
+                </picture>
+
+                <div class="controls">
+                    <a href="#s-1">
+                        prev
+                    </a>
+                    <a href="#s-3">
+                        next
+                    </a>
+                </div>
+            </div><div id="s-3">
+
+                <picture>
+                    <source srcset="images/3.jpg" media="(min-width: 1300px)">
+                <img src="images/3_s.jpg" alt="Slide 3">
+                </picture>
+
+                <div class="controls">
+                    <a href="#s-2">
+                        prev
+                    </a>
+                    <a href="#s-4">
+                        next
+                    </a>
+                </div>
+            </div><div id="s-4">
+
+                <picture>
+                    <source srcset="images/4.jpg" media="(min-width: 1300px)">
+                <img src="images/4_s.jpg" alt="Slide 4">
+                </picture>
+
+                <div class="controls">
+                    <a href="#s-3">
+                        prev
+                    </a>
+                    <a href="#s-5">
+                        next
+                    </a>
+                </div>
+            </div><div id="s-5">
+
+                <picture>
+                    <source srcset="images/5.jpg" media="(min-width: 1300px)">
+                    <img src="images/5_s.jpg" alt="Slide 5">
+                </picture>
+                
+                <div class="controls">
+                    <a href="#s-4">
+                        prev
+                    </a>
+                    <a href="#s-1">
+                        next
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
