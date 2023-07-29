@@ -1,0 +1,124 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+
+    background-color: #333;
+
+    /* Design Palette */
+    --Melrose: #B5B0D9;
+    --FreeSpeechBlue: #4D49BF;
+    --MediumSlateBlueD: #6863F2;
+    --MediumSlateBlueL: #9C99F2;
+    --WhiteSmoke: #F2F2F2;
+    --DarkGrey: #333;
+    --DarkSilver: #555;
+    --Grey: #A9A9A9;  
+
+    --Heght: 1136px;
+    --Width: 640px;
+}
+
+/* PHONE */
+.mockPhone {
+    background-color: var(--DarkSilver);
+    transform: scale(0.8);
+    display: inline-block;
+    padding: 15px;  
+}
+.mockPhone .screen {
+    width: var(--Width);
+    height: var(--Heght);
+   
+    border: 1px solid var(--DarkGrey)
+}
+
+/* VIBER */
+#viber-app {
+    background-color: var(--WhiteSmoke);
+    width: 100%; /* for a real screen vw, vh */
+    height: 100%;
+    position: relative;
+}
+#viber-app header {
+    height: 7%;
+    width: 100%;
+    position: absolute;
+    background-color: brown;
+}
+#viber-app section {    
+    height: 86%;
+    width: 100%;
+    background-color: var(--WhiteSmoke);
+    position: relative;
+    top: 7%;
+}
+#viber-app footer {
+    height: 7%;
+    width: 100%;
+    position: absolute;
+    background-color: brown;
+    bottom: 0;
+}
+#viber-app .contacts {
+    height: 100%;
+    /*background-color: darkgreen;*/
+}
+#viber-app .contacts li {
+    height: calc(100%/8);
+    border-top: 1px solid var(--DarkSilver);
+    border-bottom: 1px solid var(--DarkSilver);
+    box-sizing: border-box;
+    position: relative;
+}
+#viber-app .contact {
+    display: inline-block;
+    position: absolute;
+}
+#viber-app .contact img {
+    width: calc(100%/5);
+    margin-left: 3%;
+}
+#viber-app .contact h2 {
+    position: absolute;
+    display: inline-block;
+    padding: 5% 2%;
+    font-weight: bold;
+    color: var(--DarkGrey);
+    font-size: 1.2em;      
+}
+#viber-app .contact .p-1 {
+    position: absolute;
+    display: inline-block;
+    color: var(--DarkSilver);
+    padding: 10% 2%;    
+}
+#viber-app .contact .p-2 {
+    position: absolute;
+    display: inline-block;
+    color: var(--DarkSilver);
+    padding: 14% 2%;    
+}
+
+#viber-app .data {
+    display: inline-block;
+    position: absolute;
+    right: 3%;
+    top: 10%;   
+}
+#viber-app .data .status {
+    display: inline-block;    
+    color: var(--Grey);
+}
+#viber-app .data .time {
+    display: inline-block;
+    padding: 5px;
+    color: var(--MediumSlateBlueD);
+}
+#viber-app .data .count {
+    position: absolute;
+    right: 0;
+    padding: 5px 7px;    
+    border-radius: 40%;
+    color: var(--WhiteSmoke);
+    background-color: var(--Grey);
+    margin: 5px;
+}
