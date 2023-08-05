@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    background-color: #333;
+}
+.navbar {
+    background: #777;
+    color: white;
+    padding: 1rem;
+    font-family: Arial;
+}
+.navbar span {
+    display: inline-block;
+    vertical-align: middle;
+}
+.navbar-notification {
+    /* settings */
+    --size: 2rem;
+
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5em;
+    position: relative;
+
+    position: relative;
+}
+
+/*@media (max-width: 1000px) {
+    .navbar-notification {
+        --size: 1rem;
+    }
+}*/
+    
+
+/*.navbar-notification::after {
+    content: "3";
+    display: block;
+    position: absolute;
+    top: -1px;
+    right: -3px;
+
+    color: white;
+    background-color: red;
+    border-radius: 100%;
+    font-size: .5em;
+    width: 10px;
+    height: 10px;
+    text-align: center;     
+    
+    animation: number 2.5s linear;      
+}*/
+.navbar-notification label {
+    /*background-image: url(Pictogrammers-Material-Bell.svg);*/
+    background-color: greenyellow;
+    /*background-image: linear-gradient(greenyellow, green);*/
+
+    mask: url(Pictogrammers-Material-Bell.svg);
+    -webkit-mask: url(Pictogrammers-Material-Bell.svg);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 0;
+    /*color: transparent;*/
+
+    display: inline-block;
+    vertical-align: middle;
+    width: var(--size);
+    height: var(--size);
+    cursor: pointer;
+
+    transform: rotate(0deg);
+    transform-origin: top;
+
+    animation: swing .2s 5;
+}
+
+.navbar-notification .badge {
+    font-size: calc( var(--size) / 2);
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-color: red;
+    text-align: center;
+    line-height: 1em;
+    border-radius: 100%;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    opacity: 0;
+    animation: fade 1s 1s;
+    animation-fill-mode: forwards;
+}
+.navbar-notification input[type="checkbox"] {
+    display: none;
+}
+@keyframes swing {
+    0% {transform: rotate(0deg)}
+    25% {transform: rotate(15deg)}
+    50% {transform: rotate(0deg)}
+    75% {transform: rotate(-15deg)}
+    100% {transform: rotate(0deg)}
+}
+/*@keyframes number {
+    0% {opacity: 0;} 
+    50% {opacity: 0;} 
+    100% {opacity: 1;}
+}*/
+
+@keyframes fade {
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.notifications {
+    display: block;
+    position: absolute;
+    top: 45px;
+    left: -30%;
+    width: 350px;
+    background-color: #ccc;
+    
+    opacity: 0;     
+}
+.notifications::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    
+    border-width: 0 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent #ccc;
+}
+.notifications ol {
+    margin: calc( var(--size) / 2);
+    margin-left: var(--size);
+    padding: calc( var(--size) / 4);
+}
+.notifications li {
+    color: black;
+    padding: 5px;
+    padding-left: 0;
+    margin: 0;
+    font-family: Arial;
+    font-size: calc( var(--size) / 2);    
+}
+
+#not-toggler:checked + .notifications {    
+    display: block;
+    opacity: 1;    
+}
+
