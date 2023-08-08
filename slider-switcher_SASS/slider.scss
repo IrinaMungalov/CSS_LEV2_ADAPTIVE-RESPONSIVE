@@ -1,0 +1,55 @@
+$size: 100px;
+$colorLight: white;
+$colorDark: black;
+
+body {
+    background-color: lighten($colorDark, 15%);
+}
+
+.slider {
+    color: $colorLight;
+    font-family: Arial;
+    
+    width: $size * 3;
+    height: $size * 5;
+    margin: $size * .5 auto;
+
+    background-image: url(882-300x500.jpg);
+    text-align: center;
+
+    text-shadow: $size * 0.01 $size * 0.01 $size * 0.03 $colorDark;
+
+    img {
+        height: $size * 4;
+        width: $size * 3;
+    
+        object-fit: cover;
+        object-position: top;
+    
+        filter: grayscale(100%) brightness(0.5);
+        transition: 0.7s;
+    }
+
+    %arrow-shared {
+        font-size: $size * .4;
+        text-decoration: none;
+        color: $colorLight;
+        display: block;
+    }
+
+    .arrow-up {
+        @extend %arrow-shared;
+        transform: translateY($size * -1.35);
+    }
+
+    .arrow-down {
+        @extend %arrow-shared;
+        transform: translateY($size * -1.53);
+    }
+
+    &:target img {
+        height: $size;
+    }
+
+}
+ 
