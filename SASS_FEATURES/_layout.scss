@@ -1,0 +1,10 @@
+@use "sass:map";
+
+body {
+    // generate css variables
+    @each $colorName, $colorValue in $colors {
+        --#{$colorName}: #{$colorValue};
+    }
+
+    background-color: map.get($colors, "dark");
+}
